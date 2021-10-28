@@ -1,0 +1,87 @@
+
+# 1 ) leap year
+
+#!/bin/sh
+
+echo "Enter the Year(YYYY): "
+read year
+
+if [ $((year%4)) -eq 0 ]
+then
+        if [ $((year%100)) -eq 0 ]
+        then
+                if [ $((year%400)) -eq 0 ]
+                then
+                        echo "It is Leap year"
+                fi
+        else
+                echo "Its a  Leap year"
+        fi
+else
+        echo "Its not a leap yaar"
+fi
+
+
+
+
+
+# 2 ) area of circle 
+
+#!/bin/sh
+
+echo "Enter the radius of circle"
+
+read radius
+
+num=$(echo "3.14*$radius*$radius"|bc)
+
+echo $num
+
+
+
+
+
+
+# 3 ) program to tell whether given number positive , negative or equal to zero
+
+#!/bin/sh
+
+echo "Enter the number: "
+read num
+
+
+if [ $num -eq 0 ]
+then
+        echo "Number is Zero"
+elif [ $num -lt 0 ]
+then
+        echo "Number is Negative"
+else
+        echo "Number is Positive"
+fi
+
+
+
+
+
+
+# 4 ) greatest of three Numbers
+
+
+#!/bin/sh
+
+echo "Enter three Numbers: "
+read num1
+read num2
+read num3
+
+if [ $num1 -gt $num2 ] && [ $num1 -gt $num3 ]
+then
+
+        echo "Greater is $num1 "
+elif [ $num1 -lt $num2 ] && [ $num2 -gt $num3 ]
+then
+        echo "Greater is $num2 "
+else
+        echo "Greater is $num3 "
+fi
